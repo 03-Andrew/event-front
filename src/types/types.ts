@@ -1,3 +1,4 @@
+
 export interface Venue{
     id: number;
     name: string;
@@ -20,4 +21,22 @@ export type Event = {
   description: string;
   date: string;
   max_tickets: number;
+}
+
+export type VenueSection = {
+  id: number;
+  name: string;
+  capacity: number;
+  seatRangeStart: string;
+  seatRangeEnd: string;
+}
+
+export type TicketType1 = {
+  id: number;
+  name: string;
+  price: number;
+  max_tickets: number;
+  venue_section: VenueSection;
+  ticket_count: number;
+
 }

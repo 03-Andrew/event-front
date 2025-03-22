@@ -20,7 +20,7 @@ export default function Hero() {
   const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={ref} className="w-full h-[100vh] overflow-hidden relative">
+    <section ref={ref} className="w-full h-[100vh] overflow-hidden relative ">
       <motion.div className="absolute inset-0 z-0" style={{ y: backgroundY }}>
         {/* Add overlay with blur */}
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] z-20" />
@@ -39,7 +39,7 @@ export default function Hero() {
         className="relative z-20 h-full flex flex-col justify-center"
         style={{ y: textY, opacity: opacityText }}
       >
-        <div className="max-w-2xl space-y-4 p-4 md:p-6">
+        <div className="max-w-2xl space-y-4 p-4 md:p-6 container mx-auto max-w-7xl px-4">
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none text-white drop-shadow-md">
             Book Your Next Event Experience
           </h1>
