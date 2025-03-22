@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import QueryProvider from "@/components/QueryProvider";
 import Header from "@/components/layout/header";
-
+import { Footer } from "@/components/layout/footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -39,6 +39,7 @@ export default function RootLayout({
             <QueryProvider>
               <Header/>
               {children}
+              <Footer />
             </QueryProvider>
           </ThemeProvider>
         </body>

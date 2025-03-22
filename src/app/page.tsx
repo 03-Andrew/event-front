@@ -14,12 +14,11 @@ export default function Home() {
   const { data, isLoading, isError } = useFetchEvents();
   console.log(data, isLoading, isError);
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div className="min-h-screen flex flex-col items-center justify-center ">
       <Hero/>
       <Features/>
       <FeaturedEvents isLoading={isLoading} events={data || []} />
       <CallToAction />
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 import { Calendar, MapPin, Ticket } from "lucide-react";
-import FeatureCard from "./featureCard";
+import FeatureCard from "./feature-card";
 
 export default function Features() {
   return (

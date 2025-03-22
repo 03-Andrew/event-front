@@ -6,7 +6,7 @@ export default function Event() {
   const { data: events, isLoading, isError } = useFetchEvents();
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8">
+    <div className="min-h-screen flex flex-col items-center justify-center px-4 md:px-8 my-6">
       <h1 className="text-3xl font-bold mb-6">Events</h1>
       {isLoading ? (
         <div className="flex justify-center items-center py-12">
@@ -15,8 +15,8 @@ export default function Event() {
       ) : isError ? (
         <div className="text-red-500">Failed to load events. Please try again later.</div>
       ) : events && events.length > 0 ? (
-        <div className="mx-auto grid max-w-6xl gap-4 py-12 md:grid-cols-2 lg:grid-cols-4">
-          {events.map((event) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-screen-xl">
+          {events.slice(0, 9).map((event) => (
             <EventCard key={event.id} event={event} />
           ))}
         </div>

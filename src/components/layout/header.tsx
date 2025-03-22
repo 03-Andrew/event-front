@@ -8,6 +8,7 @@ import { Menu, Search, User } from "lucide-react";
 import ModeToggle from "../mode-toggle";
 import { cn } from "@/lib/utils";
 import { DialogTitle } from "@/components/ui/dialog";
+import AccountDropdown from "../account-dropdown";
 const routes = [
   {
     href: "/",
@@ -95,7 +96,8 @@ export default function Header() {
             ))}
           </nav>
         </div>
-        <div className="hidden md:flex items-center gap-2 md:gap-6">
+        <div className="hidden md:flex items-center gap-2 ">
+            <AccountDropdown loggedIn={false}/>
             <ModeToggle/>
         </div>
       </div>
