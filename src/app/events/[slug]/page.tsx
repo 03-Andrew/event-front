@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { useFetchEvent } from "@/hooks/useFetchEvents";
 import useWebSocket from "@/hooks/useWebSockets";

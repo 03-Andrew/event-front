@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { Menu, Search, User } from "lucide-react";
+import { Menu } from "lucide-react";
 import ModeToggle from "../mode-toggle";
 import { cn } from "@/lib/utils";
 import { DialogTitle } from "@/components/ui/dialog";

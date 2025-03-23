@@ -33,7 +33,7 @@ export default function FeaturedEvents({
             </div>
           ) : events ? (
             <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
-              {events.slice(0, 3).map((event, index) => (
+              {events.slice(0, 3).map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}
             </div>

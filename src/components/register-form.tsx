@@ -65,7 +65,7 @@ export function RegisterForm({
                     type={showConfirmPassword ? "text" : "password"}
                     required
                   />
-                  {/* <button
+                  <button
                     type="button"
                     onClick={() =>
                       setShowConfirmPassword(!showConfirmPassword)
@@ -73,7 +73,7 @@ export function RegisterForm({
                     className="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-muted-foreground"
                   >
                     {showConfirmPassword ? <Eye className="h-4 w-4"/> : <EyeOff className="h-4 w-4"/>}
-                  </button> */}
+                  </button>
                 </div>
               </div>
               <Button type="submit" className="w-full">

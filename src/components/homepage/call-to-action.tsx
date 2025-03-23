@@ -2,23 +2,23 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+// import { motion, useScroll, useTransform } from "framer-motion";
 
 import { Button } from "@/components/ui/button";
 
 export function CallToAction() {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start end", "end start"],
+  // });
 
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
-  const opacity = useTransform(
-    scrollYProgress,
-    [0, 0.2, 0.8, 1],
-    [0.6, 1, 1, 0.6]
-  );
+  // const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
+  // const opacity = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.2, 0.8, 1],
+  //   [0.6, 1, 1, 0.6]
+  // );
 
   return (
     <section
