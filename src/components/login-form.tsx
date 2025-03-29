@@ -26,7 +26,7 @@ export function LoginForm({
       toast("Event has been created.");
 
     } catch (error) {
-      alert("Invalid credentials!");
+      alert(String(error));
     }
   };
 
