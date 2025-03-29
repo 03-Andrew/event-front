@@ -20,16 +20,17 @@ export default function RootLayout({
     <>
       <html lang="en" suppressHydrationWarning>
         <head />
-        <body>
+        <body className="flex flex-col min-h-screen">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
+            
           >
             <QueryProvider>
               <Header/>
-              {children}
+              <main className="flex-grow">{children}</main>
               <Footer />
             </QueryProvider>
           </ThemeProvider>

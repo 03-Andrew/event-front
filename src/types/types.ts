@@ -21,6 +21,8 @@ export type Event = {
   description: string;
   date: string;
   max_tickets: number;
+  poster: string | null;
+  layout: string | null;
 }
 
 export type VenueSection = {

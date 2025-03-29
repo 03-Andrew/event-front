@@ -9,7 +9,7 @@ import { Calendar, Clock, MapPin, Share2 } from "lucide-react";
 import { formatEventDate } from "@/lib/formatEventDate";
 import { Button } from "@/components/ui/button";
 import BookingProcess from "@/components/booking/bookingProcess";
-
+import {API_BASE_URL} from "@/lib/api";
 export default function EventDetails() {
   const params = useParams() as { slug?: string | string[] };
   const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug ?? "";
@@ -39,7 +39,7 @@ export default function EventDetails() {
     );
   }
   const { date, time } = formatEventDate(event.date);
-
+  const layoutURL = event.layout !== null ? `${API_BASE_URL}${event.layout}` : "/placeholder.svg";
   return (
     <div className="container mx-auto max-w-7xl px-4 py-8">
       <div className="flex flex-col lg:flex-row gap-8 min-h-[calc(100vh-8rem)]">
@@ -53,9 +53,9 @@ export default function EventDetails() {
             </Link>
             <h1 className="text-3xl font-bold mt-2">{event.title}</h1>
           </div>
-          <div className="relative aspect-video overflow-hidden rounded-lg">
+          <div className="relative w-full h-full overflow-hidden rounded-lg">
             <Image
-              src="/placeholder.svg?height=400&width=800"
+              src={layoutURL}
               alt={event.title}
               fill
               className="object-cover"

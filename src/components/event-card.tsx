@@ -14,18 +14,22 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 
+import {API_BASE_URL} from "@/lib/api";
 interface EventCardProps {
   event: Event;
 }
 
+
 export default function EventCard({ event }: EventCardProps) {
   const { date, time } = formatEventDate(event.date);
   const slug = `${event.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}-${date.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${event.id}`;  
+  const posterURL = event.poster !== null ? `${API_BASE_URL}${event.poster}` : "/placeholder.svg";
+
     return (
     <Card className="overflow-hidden border border-[var(--border)]">
       <div className="relative h-48">
         <Image
-          src="/placeholder.svg"
+          src={posterURL}
           alt={event.title}
           fill
           className="object-cover"
